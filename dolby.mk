@@ -44,12 +44,16 @@ PRODUCT_COPY_FILES += \
 
 # Dolby
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.audio.spatializer_enabled=true \
     ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
     ro.vendor.product.device.db=OP_DEVICE \
     ro.vendor.product.manufacturer.db=OP_PHONE \
     vendor.product.device=OP_PHONE \
     vendor.product.manufacturer=OPD
+
+# AOSP
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.audio.spatializer_enabled=true \
+    ro.audio.monitorRotation=true
 
 # DaxUI and daxService
 PRODUCT_PACKAGES += \
